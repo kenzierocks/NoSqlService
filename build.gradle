@@ -180,6 +180,7 @@ project(':RunNoSqlService') {
         version project.mcVersion + '-' + project.forgeVersion
         mappings 'snapshot_20160109'
         runDir 'run'
+        makeObfSourceJar = false
     }
     repositories {
         maven {
@@ -191,4 +192,5 @@ project(':RunNoSqlService') {
         compile rootProject
         compile group: 'org.spongepowered', name: 'spongeforge', version: 'latest', classifier: 'dev'
     }
+    build.dependsOn = []
 }
